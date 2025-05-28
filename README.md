@@ -4,8 +4,6 @@
 
 Crea una web en Django utilizando herencia de plantillas, con un modelo de por lo menos 3 clases, un formulario para ingresar datos a las 3 clases y un formulario para buscar algo en la base de datos.
 
-> 💡 Sugerencia: La estructura está basada en un sitio de administración de mascotas (estilo blog simple) para anticipar futuras entregas.
-
 ---
 
 ## 🎯 Objetivos
