@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h4>Busca tus mascotas usando tu ID de Cliente!</h4>
+<form method="get" class="row">
+    <div class="input-field col s6">
+        <input type="number" name="customer_id" id="customer_id" value="{{ customer_id }}">
+        <label for="customer_id">Ingresa tu ID de Cliente</label>
+    </div>
+    <div class="col s6">
+        <button class="btn waves-effect waves-light" type="submit">Buscar</button>
+    </div>
+</form>
+
+{% if pets is not None %}
+<h5 class="cyan-text text-darken-3">Nombre Cliente: {{ customer.name }} (ID: {{ customer_id }})</h5>
+<h6>Estas son tus mascotas:</h6>
+{% if pets %}
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Breed</th>
+            <th>Age</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pet in pets %}
+        <tr>
+            <td>{{ pet.name }}</td>
+            <td>{{ pet.species }}</td>
+            <td>{{ pet.breed }}</td>
+            <td>{{ pet.age }}</td>
+            <td>{{ pet.notes }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No pets found for that customer.</p>
+{% endif %}
+{% endif %}
+{% endblock %}

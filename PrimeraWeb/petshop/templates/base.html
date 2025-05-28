@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}NaTe Pet Shop{% endblock %}</title>
+    <!-- Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Custom global CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+  <body class="flex-wrapper">
+    <!-- Navigation -->
+     
+    <nav class="nav-wrapper teal" style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+      <div class="container">
+        <a href="/" class="brand-logo">NaTe Pet Shop</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="{% url 'pet_list' %}">Mascotas</a></li>
+          <li><a href="{% url 'search_pets' %}">Busca tus Mascotas</a></li>
+          <li><a href="{% url 'add_order' %}">Ordenes</a></li>
+          <li><a href="{% url 'add_customer' %}">Clientes</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Mobile Sidenav -->
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="{% url 'pet_list' %}">Mascotas</a></li>
+      <li><a href="{% url 'search_pets' %}">Busca tus Mascotas</a></li>
+      <li><a href="{% url 'add_order' %}">Ordenes</a></li>
+      <li><a href="{% url 'add_customer' %}">Clientes</a></li>
+    </ul>
+
+    <main class="content container">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">NaTe PetShop</h5>
+            <p class="grey-text text-lighten-4">Proveemos la más alta calidad de productos para tus mascotas. Ser natural es nuestra prioridad!</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links Rápidos</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="/">Inicio</a></li>
+              <li><a class="grey-text text-lighten-3" href="{% url 'pet_list' %}">Mascotas</a></li>
+              <li><a class="grey-text text-lighten-3" href="{% url 'search_pets' %}">Busca tus Mascotas</a></li>
+              <li><a class="grey-text text-lighten-3" href="{% url 'add_order' %}">Ordenes</a></li>
+              <li><a class="grey-text text-lighten-3" href="{% url 'add_customer' %}">Clientes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2025 PetShop Inc.
+          <a class="grey-text text-lighten-4 right" href="#!">Contáctanos</a>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const elems = document.querySelectorAll('.carousel');
+      M.Carousel.init(elems, {
+        fullWidth: true,
+        indicators: true
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('select');
+      M.FormSelect.init(elems);
+    });
+  </script>
+
+  </body>
+  
+</html>

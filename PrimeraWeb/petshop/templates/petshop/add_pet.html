@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Home - NaTe Pet Shop{% endblock %}
+{% block content %}
+
+    <h1>Agregar nueva mascota</h1>
+    <form method="post">
+      {% csrf_token %} {{ pet_form.as_p }}
+      <button class="btn waves-effect waves-light" type="submit">Guardar</button>
+    </form>
+    <div style="margin-top: 20px;margin-bottom: 20px;">
+      <a class="waves-effect waves-light btn" href="{% url 'pet_list' %}">Regresar a la lista</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Home - NaTe Pet Shop{% endblock %}
+{% block content %}
+
+    <h1>Lista de Mascotas por Cliente</h1>
+    <a class="waves-effect waves-light btn" href="{% url 'add_pet' %}">Agregar nueva mascota</a>
+    <table class="striped">
+    <thead>
+      <tr>
+        <th>Nombre de Mascota</th>
+        <th>Especie</th>
+        <th>Dueño</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pet in pets %}
+      <tr>
+        <td>{{ pet.name }}</td>
+        <td>{{ pet.species }}</td>
+        <td>{{ pet.customer.name }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
