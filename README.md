@@ -28,22 +28,26 @@ Crea una web en Django utilizando herencia de plantillas, con un modelo de por l
 
 ---
 
+## 📁 Estructura del Proyecto
+
+```plaintext
 petshop/
 ├── templates/
-│ ├── base.html
-│ ├── home.html
-│ ├── add_customer.html
-│ ├── add_pet.html
-│ ├── add_order.html
-│ └── search_pets.html
+│   ├── base.html
+│   ├── home.html
+│   ├── add_customer.html
+│   ├── add_pet.html
+│   ├── add_order.html
+│   └── search_pets.html
 ├── static/
-│ └── css/
-│ └── styles.css
+│   └── css/
+│       └── styles.css
 ├── models.py
 ├── forms.py
 ├── views.py
 ├── urls.py
-└── …
+└── ...
+```
 
 ---
 
