@@ -27,3 +27,43 @@ Crea una web en Django utilizando herencia de plantillas, con un modelo de por l
 - [x] Este archivo `README.md` que indica el orden de prueba ✅
 
 ---
+
+petshop/
+├── templates/
+│ ├── base.html
+│ ├── home.html
+│ ├── add_customer.html
+│ ├── add_pet.html
+│ ├── add_order.html
+│ └── search_pets.html
+├── static/
+│ └── css/
+│ └── styles.css
+├── models.py
+├── forms.py
+├── views.py
+├── urls.py
+└── …
+
+---
+
+## 🧪 Cómo probar la app
+
+### 1. Clona el repositorio:
+
+```bash
+git clone https://github.com/telleznadim/TuPrimeraPagina-Tellez.git
+cd PrimeraWeb
+python manage.py runserver
+```
+
+## 🔍 Funcionalidades principales
+
+| Página                         | Descripción                                  |
+| ------------------------------ | -------------------------------------------- |
+| `/`                            | Página principal con carousel e introducción |
+| `/pets/`                       | Lista de mascotas en una tabla               |
+| `/pets/add/`                   | Formulario para agregar nueva mascota        |
+| `/customers/add/`              | Formulario para agregar nuevo cliente        |
+| `/orders/add/`                 | Formulario para registrar nueva orden        |
+| `/pets/search/?customer_id=ID` | Buscar mascotas por ID de cliente            |
