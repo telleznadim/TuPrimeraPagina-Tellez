@@ -53,7 +53,7 @@ petshop/
 
 ## 🧪 Cómo probar la app
 
-### 1. Clona el repositorio:
+### Clona el repositorio:
 
 ```bash
 git clone https://github.com/telleznadim/TuPrimeraPagina-Tellez.git
@@ -71,3 +71,9 @@ python manage.py runserver
 | `/customers/add/`              | Formulario para agregar nuevo cliente        |
 | `/orders/add/`                 | Formulario para registrar nueva orden        |
 | `/pets/search/?customer_id=ID` | Buscar mascotas por ID de cliente            |
+
+## 📁 Extras
+
+- ✅ Diseño responsivo con Materialize CSS
+- ✅ Navegación fija con links de acceso rápido
+- ✅ Uso de CSRF para formularios seguros
