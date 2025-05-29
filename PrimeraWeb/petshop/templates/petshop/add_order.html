@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Add New Order</h3>
+<h3>Agrega una nueva orden</h3>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button class="btn waves-effect waves-light" type="submit">Add Order</button>
+    <button class="btn waves-effect waves-light" type="submit">Agregar Orden</button>
 </form>
 {% endblock %}
